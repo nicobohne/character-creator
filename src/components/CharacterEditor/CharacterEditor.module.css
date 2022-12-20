@@ -21,6 +21,12 @@
   width: 65%;
 }
 
+@media (orientation: portrait) {
+	.header {
+		width: 100%;
+	}
+}
+
 .title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -42,6 +48,34 @@
 	min-height: 500px;
 }
 
+@media (orientation: portrait) {
+	.characterWrapper {
+		position: relative;
+		inset: 0;
+		min-height: 0;
+	}
+}
+
 .controlColumn {
 	width: 50%;
+}
+
+@media (orientation: portrait) {
+	.controlColumn {
+		width: 100%;
+
+		position: fixed;
+		bottom: 15%;
+		left: 0;
+		width: 100%;
+
+		display: flex;
+		gap: 32px;
+		white-space: nowrap;
+		overflow: auto;
+
+		padding-inline: 32px;
+
+		z-index: 1;
+	}
 }
